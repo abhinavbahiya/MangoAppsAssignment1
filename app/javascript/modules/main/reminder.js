@@ -1,13 +1,16 @@
 import React from 'react';
 
 class Reminder extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {value: '', lengthRemaining: ''};
+    this.state = {
+      value: '',
+      lengthRemaining: ''
+    }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  };
 
   handleChange(event) {
     text = event.target.value;
@@ -35,7 +38,7 @@ class Reminder extends React.Component {
              <label>
                Characters Remaining {this.state.lengthRemaining}
              </label>
-             <DatePicker dateFormat="YYYY/MM/DD" disabled={true} selected={this.state.startDate} onChange={this.handleDateChange} />
+            //  <DatePicker dateFormat="YYYY/MM/DD" disabled={true} selected={this.state.startDate} onChange={this.handleDateChange} />
              <input type="submit" value="Submit" />
            </form>
         </div>
